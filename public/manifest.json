@@ -1,7 +1,7 @@
 {
-  "short_name": "5CharChat",
-  "name": "5-Character Code Chat",
-  "description": "Secure, fast messaging using simple 5-character codes.",
+  "short_name": "WhatsDown",
+  "name": "WhatsDown",
+  "description": "Secure, fast messaging using simple 5-character codes. Branded as WhatsDown.",
   "icons": [
     {
       "src": "/icon.png",

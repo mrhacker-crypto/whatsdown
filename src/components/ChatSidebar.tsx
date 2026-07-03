@@ -41,6 +41,18 @@ export default function ChatSidebar({
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(true);
   const [isInstallModalOpen, setIsInstallModalOpen] = useState(false);
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
 
   // Copy 5-character code to clipboard
   const handleCopyCode = () => {
@@ -195,8 +207,13 @@ export default function ChatSidebar({
         <div className="flex items-center gap-3">
           <Avatar name={currentUser.name} code={currentUser.code} isOnline={true} showStatus={true} />
           <div className="overflow-hidden">
-            <h3 className="font-semibold text-white text-sm truncate">
-              {currentUser.name}
+            <h3 className="font-semibold text-white text-sm truncate flex items-center gap-1.5">
+              <span>{currentUser.name}</span>
+              {!isOnline && (
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-medium bg-amber-500/10 border border-amber-500/20 text-amber-400 select-none animate-pulse">
+                  Offline
+                </span>
+              )}
             </h3>
             <div className="flex items-center gap-1.5 mt-0.5">
               <span className="text-xs font-mono font-medium text-teal-400 bg-teal-500/10 border border-teal-500/20 px-1.5 py-0.5 rounded tracking-wide select-all uppercase">

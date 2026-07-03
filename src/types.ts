@@ -1,6 +1,7 @@
 export interface User {
   code: string; // 5-character unique code, e.g., "7B8X2"
   name: string;
+  password?: string;
   createdAt: any;
   lastSeen: any;
   isOnline: boolean;
