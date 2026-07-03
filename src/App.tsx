@@ -4,7 +4,7 @@ import { db } from "./firebase";
 import { User } from "./types";
 import Auth from "./components/Auth";
 import ChatLayout from "./components/ChatLayout";
-import { MessageSquareCode } from "lucide-react";
+import WhatsDownLogo from "./components/WhatsDownLogo";
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
@@ -63,9 +63,7 @@ export default function App() {
     return (
       <div className="h-screen w-screen bg-[#0B0E11] flex flex-col items-center justify-center font-sans">
         <div className="flex flex-col items-center">
-          <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-lg shadow-teal-500/20 mb-4 animate-bounce">
-            <MessageSquareCode className="h-8 w-8" />
-          </div>
+          <WhatsDownLogo size="lg" className="mb-4 animate-bounce" />
           <p className="text-gray-400 font-medium text-sm">Verifying session...</p>
         </div>
       </div>

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
 import { User } from "../types";
-import { MessageSquareCode, UserPlus, LogIn, ArrowRight, Sparkles, Lock, User as UserIcon, Copy, Check } from "lucide-react";
+import { UserPlus, LogIn, ArrowRight, Sparkles, Lock, User as UserIcon, Copy, Check } from "lucide-react";
 import { motion } from "motion/react";
+import WhatsDownLogo from "./WhatsDownLogo";
 
 interface AuthProps {
   onLogin: (user: User) => void;
@@ -240,16 +241,16 @@ export default function Auth({ onLogin }: AuthProps) {
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, type: "spring" }}
-          className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-400 text-black shadow-xl shadow-teal-500/20 mb-6"
+          className="mx-auto flex justify-center mb-6"
         >
-          <MessageSquareCode className="h-10 w-10 text-slate-950" />
+          <WhatsDownLogo size="lg" />
         </motion.div>
 
         <h2 className="text-3xl font-extrabold tracking-tight text-white font-sans">
-          WhatsDown
+          What's Down
         </h2>
         <p className="mt-2 text-sm text-gray-400 font-sans px-4">
-          The next-gen secure messaging experience. Register a profile and get your unique 5-character access key for WhatsDown.
+          The next-gen secure messaging experience. Register a profile and get your unique 5-character access key for What's Down.
         </p>
       </div>
 

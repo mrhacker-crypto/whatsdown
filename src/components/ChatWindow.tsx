@@ -32,6 +32,7 @@ import {
 import { motion } from "motion/react";
 import AudioPlayer from "./AudioPlayer";
 import CallScreen from "./CallScreen";
+import WhatsDownLogo from "./WhatsDownLogo";
 
 interface ChatWindowProps {
   currentUser: User;
@@ -455,12 +456,10 @@ export default function ChatWindow({
           transition={{ duration: 0.6 }}
           className="max-w-md flex flex-col items-center z-10"
         >
-          <div className="h-20 w-20 bg-teal-500/10 border border-teal-500/20 text-teal-400 rounded-3xl flex items-center justify-center mb-6 shadow-xl shadow-teal-500/5 animate-pulse">
-            <ShieldCheck className="h-10 w-10" />
-          </div>
-          <h2 className="text-2xl font-bold text-white mb-2">Connect by 5-Character Code</h2>
+          <WhatsDownLogo size="xl" className="mb-6 animate-pulse" />
+          <h2 className="text-2xl font-bold text-white mb-2">Welcome to What's Down</h2>
           <p className="text-sm text-gray-400 mb-6 leading-relaxed">
-            Welcome to the secure 5-character chat space. Share your unique code with others, or enter theirs to start chatting in real-time.
+            Connect securely and chat in real-time. Share your unique 5-character code with others, or enter theirs to launch your secure conversations instantly.
           </p>
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#15191C] border border-white/5 rounded-full text-xs text-gray-400 font-medium tracking-wide">
             🔒 Fully encrypted database channels

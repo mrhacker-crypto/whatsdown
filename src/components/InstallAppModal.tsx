@@ -48,7 +48,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhatsDown - Launcher</title>
+  <title>What's Down - Launcher</title>
   <style>
     body {
       background-color: #0B0E11;
@@ -106,7 +106,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
 <body>
   <div class="container">
     <div class="logo">💬</div>
-    <div class="title">WhatsDown</div>
+    <div class="title">What's Down</div>
     <div class="sub">Launching secure 5-character chat...</div>
     <div class="spinner"></div>
   </div>
@@ -122,7 +122,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "WhatsDown-Launcher.html";
+    a.download = "Whats-Down-Launcher.html";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -154,7 +154,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
         const next = prev + Math.floor(Math.random() * 8) + 4;
         if (next >= 100) {
           clearInterval(interval);
-          setInstallStage("WhatsDown installed successfully!");
+          setInstallStage("What's Down installed successfully!");
           setIsSuccess(true);
           setInstalling(false);
           downloadLauncherFile();
@@ -169,7 +169,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
         } else if (next < 70) {
           setInstallStage("Registering offline service worker (sw.js)...");
         } else if (next < 90) {
-          setInstallStage("Generating WhatsDown-Launcher shortcut...");
+          setInstallStage("Generating What's Down-Launcher shortcut...");
         } else {
           setInstallStage("Wrapping client package...");
         }
@@ -204,7 +204,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
             </div>
             <div>
               <h3 className="text-lg font-bold text-white">Download & Install</h3>
-              <p className="text-xs text-gray-400">Install WhatsDown onto your phone or laptop</p>
+              <p className="text-xs text-gray-400">Install What's Down onto your phone or laptop</p>
             </div>
           </div>
         </div>
@@ -250,17 +250,17 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
                 <div className="flex justify-center mb-1">
                   <CheckCircle2 className="h-12 w-12 text-emerald-400 animate-pulse" />
                 </div>
-                <h4 className="text-base font-bold text-white">WhatsDown Installed Successfully!</h4>
+                <h4 className="text-base font-bold text-white">What's Down Installed Successfully!</h4>
                 <p className="text-xs text-gray-400 px-2 leading-relaxed">
-                  We have prepared and downloaded your secure launcher file: <span className="text-teal-400 font-mono">WhatsDown-Launcher.html</span>.
+                  We have prepared and downloaded your secure launcher file: <span className="text-teal-400 font-mono">Whats-Down-Launcher.html</span>.
                 </p>
                 <div className="bg-[#0B0E11] p-3 rounded-xl border border-white/5 text-left text-[11px] text-gray-400 space-y-1.5">
                   <div className="flex gap-2 items-center text-white font-semibold">
                     <Check className="h-3.5 w-3.5 text-emerald-400" />
                     <span>How to use the downloaded Launcher:</span>
                   </div>
-                  <p>1. Move the downloaded <strong className="text-gray-200">WhatsDown-Launcher.html</strong> file to your desktop or home screen folder.</p>
-                  <p>2. Double click/tap it any time to launch WhatsDown instantly!</p>
+                  <p>1. Move the downloaded <strong className="text-gray-200">Whats-Down-Launcher.html</strong> file to your desktop or home screen folder.</p>
+                  <p>2. Double click/tap it any time to launch What's Down instantly!</p>
                 </div>
                 <div className="flex gap-2">
                   <button
@@ -290,14 +290,14 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
                   <p className="text-sm text-teal-300 font-medium">
                     {isNativeAvailable
                       ? "⚡ Automatic One-Click Installer Available!"
-                      : "💬 Install WhatsDown Standalone Native Shortcut"}
+                      : "💬 Install What's Down Standalone Native Shortcut"}
                   </p>
                   <button
                     onClick={handleInstallClick}
                     className="w-full py-3.5 bg-gradient-to-tr from-teal-500 to-emerald-400 hover:opacity-90 text-black font-extrabold text-sm rounded-xl shadow-lg shadow-teal-500/15 transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Download className="h-4.5 w-4.5" />
-                    Download & Install WhatsDown
+                    Download & Install What's Down
                   </button>
                   <p className="text-[10px] text-teal-400/80">
                     Saves app files locally & triggers launcher download. Works on PC, Mac, Android, and iOS.
@@ -371,7 +371,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
                         </div>
                         <div className="flex gap-2.5 items-start text-xs text-gray-300">
                           <span className="flex h-5 w-5 rounded-full bg-teal-500/10 text-teal-400 items-center justify-center font-bold border border-teal-500/25 shrink-0 mt-0.5">3</span>
-                          <p>Confirm the prompt to pin WhatsDown directly to your launcher app drawer.</p>
+                          <p>Confirm the prompt to pin What's Down directly to your launcher app drawer.</p>
                         </div>
                       </div>
                     )}
@@ -388,7 +388,7 @@ export default function InstallAppModal({ isOpen, onClose }: InstallAppModalProp
                         </div>
                         <div className="flex gap-2.5 items-start text-xs text-gray-300">
                           <span className="flex h-5 w-5 rounded-full bg-teal-500/10 text-teal-400 items-center justify-center font-bold border border-teal-500/25 shrink-0 mt-0.5">3</span>
-                          <p>WhatsDown will open in its own clean standalone desktop frame window.</p>
+                          <p>What's Down will open in its own clean standalone desktop frame window.</p>
                         </div>
                       </div>
                     )}
