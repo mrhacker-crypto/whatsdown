@@ -1,0 +1,6 @@
+{
+  "name": "5-Character Code Chat",
+  "description": "A WhatsApp-like messaging application where users connect and chat in real-time using a unique 5-character code instead of a phone number.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

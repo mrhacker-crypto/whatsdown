@@ -1,0 +1,22 @@
+{
+  "short_name": "5CharChat",
+  "name": "5-Character Code Chat",
+  "description": "Secure, fast messaging using simple 5-character codes.",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0B0E11",
+  "theme_color": "#0B0E11",
+  "display": "standalone",
+  "orientation": "portrait"
+}
